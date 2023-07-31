@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="login">
+        <div class="heading">
+            <h1>Login Page</h1>
+        </div>
+        <div class="details">
+            <form>
+                <label for="username">Username: </label>
+                <br>
+                <input type="text" name="username" id="username" class="username" placeholder="  write your username">
+                <br>
+                <br>
+                <label for="email">Email: </label>
+                <br>
+                <input type="email" name="email" id="email" class="email" placeholder="  writeyour@email.com">
+                <br>
+                <br>
+                <label for="Password">Password: </label>
+                <br>
+                <input type="password" name="pass" id="pass" class="password" placeholder="  write your password">
+                <br>
+                <br>
+                <label for="confirm_password">Confirm Password: </label>
+                <br>
+                <input type="password" name="confirm_password" id="confirm_password" class="password"
+                    placeholder="  write your password again">
+                <br>
+                <br>
+                <div>
+                    <button class="login-button">Login</button>
+
+                    <p class="fp"><b><u>forgot password</u></b></p>
+
+                </div>
+                <hr>
+            </form>
+        </div>
+        <div class="continue">
+            <i class="fa-brands fa-google" style="color: white;">
+                <span>Continue with Google </span>
+            </i>
+        </div>
+        <br>
+        <div class="continue">
+            <i class="fa-brands fa-facebook">
+                <span>Continue with FaceBook </span>
+            </i>
+        </div>
+    </div>
+</body>
+<script>
+    // Validate the form
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirm_password = document.getElementById("confirm_password").value;
+
+        if (username == "" || email == "" || password == "" || confirm_password == "") {
+            alert("Please fill out all of the fields.");
+            return false;
+        }
+
+        if (password != confirm_password) {
+            alert("The passwords do not match.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+</html>
